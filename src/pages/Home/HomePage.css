@@ -1,0 +1,19 @@
+/* HomePage.css: 홈 페이지(HomePage.jsx)의 스타일 - 화면 틀과 배경 이미지 */
+
+/* 홈 화면 전체 틀: 화면 높이를 가득 채우는 영역 */
+.home {
+  position: relative;  /* 배경을 이 영역 안에 가두기 */
+  isolation: isolate;  /* 배경이 영역 밖으로 빠지지 않게 하기 */
+  min-height: 100vh;
+}
+
+/* 홈 화면 배경 이미지: bg1.png를 영역 전체에 깔기 */
+.home-bg {
+  position: absolute;
+  inset: 0;                    /* 부모 영역 전체를 덮기 */
+  z-index: -1;                 /* 내용 뒤로 보내기 */
+  background-image: url("../../assets/images/home/bg1.png");
+  background-size: cover;      /* 화면을 빈틈없이 채우기 */
+  background-position: center; /* 이미지 가운데 기준으로 맞추기 */
+  background-repeat: no-repeat;
+}
