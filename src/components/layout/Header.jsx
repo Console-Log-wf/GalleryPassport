@@ -3,17 +3,8 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import iconImg from "../../assets/icons/icon.png";
+import { NAV_ITEMS, LANGS } from "../../constants/menu";
 import "./Header.css";
-
-/* 메뉴 목록: 여기만 고치면 헤더와 펼침 메뉴에 같이 반영됨 */
-const NAV_ITEMS = [
-  { to: "/", label: "Home", end: true },
-  { to: "/gallery", label: "Gallery Entry" },
-  { to: "/passport", label: "My Passport" },
-  { to: "/about", label: "About" },
-];
-
-const LANGS = ["KR", "EN"];
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false); // 햄버거 펼침 메뉴 열림 여부
