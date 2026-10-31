@@ -4,7 +4,7 @@
 .home {
   position: relative;  /* 배경을 이 영역 안에 가두기 */
   isolation: isolate;  /* 배경이 영역 밖으로 빠지지 않게 하기 */
-  min-height: 100vh;
+  min-height: calc(100vh - var(--header-height, 0px)); /* 헤더 높이만큼 빼기 */
 }
 
 /* 홈 화면 배경 이미지: bg1.png를 영역 전체에 깔기 */
